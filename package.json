@@ -1,6 +1,6 @@
 {
-  "name": "linkpreview",
-  "version": "1.0.0",
+  "name": "monu-linkpreview",
+  "version": "2.0.0",
   "homepage": "https://github.com/monu-shaw/linkpreview",
   "description": "A npm package which help you to access link preview like other social networks",
   "main": "index.js",
@@ -22,8 +22,8 @@
     "index.js"
   ],
   "dependencies": {
-    "axios": "^0.21.4",
-    "cheerio": "^1.0.0-rc.10"
+    "cheerio": "^1.0.0-rc.10",
+    "puppeteer": "^16.0.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.19"

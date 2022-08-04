@@ -1,13 +1,23 @@
-import axios from 'axios';
-import  * as cheerio from 'cheerio'
+import puppeteer from 'puppeteer';
 
-export default function getLinkPreview(uri){ 
-const url = uri;
-const data = axios(url).then(res=>{
+import cheerio from 'cheerio';
+
+export default async function getLinkPreview(url) {
+  const browser = await puppeteer.launch({
+    headless: true,
+    args: []
+  });
+  const page = await browser.newPage();
+  await page.goto(url);
+  const content = await page.content();
+  const $ = cheerio.load(content);
+
+
+
+  browser.close();
+  
+  const data = (()=>{
     
-   const html =  res.data;
-   const $ = cheerio.load(html);
-
   const img =  ( () => {
     const ogImg = $('meta[property="og:image"]');
     if (
@@ -129,11 +139,7 @@ const data = axios(url).then(res=>{
     });
 
  return  {"img": img(), "title": title(), "description": description(), "domain":domainName()};
-//console.log($('meta[property="og:title"]'));
-//console.log(img());
-});
-return data;
+  })
+  return data();
 }
 
-
-//getLinkPreview('https://paddy-1cdf5.firebaseapp.com/').then(res=>console.log(res));
