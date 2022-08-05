@@ -8,7 +8,7 @@ export default async function getLinkPreview(url) {
     args: []
   });
   const page = await browser.newPage();
-  await page.goto(url);
+  await page.goto(url, {waitUntil: 'networkidle2', timeout: 0});
   const content = await page.content();
   const $ = cheerio.load(content);
 

@@ -1,11 +1,11 @@
 {
   "name": "monu-linkpreview",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "homepage": "https://github.com/monu-shaw/linkpreview",
   "description": "A npm package which help you to access link preview like other social networks",
   "main": "index.js",
   "scripts": {
-    "test": "nodemon index.js"
+    "test": "nodemon test.js"
   },
   "keywords": [
     "linkpreview",
