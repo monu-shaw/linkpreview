@@ -1,6 +1,6 @@
 {
   "name": "monu-linkpreview",
-  "version": "2.0.1",
+  "version": "2.2.1",
   "homepage": "https://github.com/monu-shaw/linkpreview",
   "description": "A npm package which help you to access link preview like other social networks",
   "main": "index.js",
@@ -10,11 +10,12 @@
   "keywords": [
     "linkpreview",
     "link-previewer",
-    "link preview"
+    "link preview",
+    "linkpreview genrator"
   ],
   "author": "Monu Shaw(https://github.com/monu-shaw)",
   "license": "MIT",
-  "repository": "monushaw/linkpreview",
+  "repository": "monu-shaw/linkpreview",
   "bugs": {
     "url": "https://github.com/monu-shaw/linkpreview/issues"
   },
@@ -22,8 +23,8 @@
     "index.js"
   ],
   "dependencies": {
-    "cheerio": "^1.0.0-rc.10",
-    "puppeteer": "^16.0.0"
+    "axios": "^0.21.4",
+    "cheerio": "^1.0.0-rc.10"
   },
   "devDependencies": {
     "nodemon": "^2.0.19"
